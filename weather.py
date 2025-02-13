@@ -7,7 +7,7 @@ from datetime import datetime
 import requests
 import pytz
 
-# Clé API OpenWeatherMap (remplacez par votre propre clé)
+# Clé API OpenWeatherMap 
 API_KEY = "d950743303a8efbf9a0be627afbd5ebb"
 
 root = Tk()
@@ -50,9 +50,9 @@ def seMeterer():
 
         condition = json_data['weather'][0]['description']
         temp = int(json_data['main']['temp'])
-        pression = json_data['main']['pressure']  # Correction: "pression" -> "pressure"
-        humidite = json_data['main']['humidity']  # Correction: "humidite" -> "humidity"
-        vent = json_data['wind']['speed']  # Correction: "vent['rapide']" -> "wind['speed']"
+        pression = json_data['main']['pressure'] 
+        humidite = json_data['main']['humidity'] 
+        vent = json_data['wind']['speed']  
 
         t.config(text=f"{temp}°C")
         c.config(text=f"{condition.capitalize()} | RESSENTI {temp}°C")
